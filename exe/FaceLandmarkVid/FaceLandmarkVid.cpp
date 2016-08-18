@@ -74,6 +74,42 @@
 #include <filesystem.hpp>
 #include <filesystem/fstream.hpp>
 
+
+//General includes:
+#include <iostream>
+#include <stdio.h>
+#include <string>
+
+//Network related includes:
+#include <sys/socket.h>
+#include <netdb.h>
+#include <arpa/inet.h>
+
+//Target host details:
+#define PORT 8888
+#define HOST "127.0.0.1"
+
+int sd, ret;
+struct sockaddr_in server;
+struct in_addr ipv4addr;
+struct hostent *hp;
+
+void DoConnect()
+{
+    sd = socket(AF_INET,SOCK_STREAM,0);
+    server.sin_family = AF_INET;
+
+    inet_pton(AF_INET, HOST, &ipv4addr);
+    hp = gethostbyaddr(&ipv4addr, sizeof ipv4addr, AF_INET);
+    //hp = gethostbyname(HOST);
+
+    bcopy(hp->h_addr, &(server.sin_addr.s_addr), hp->h_length);
+    server.sin_port = htons(PORT);
+
+    connect(sd, (const sockaddr *)&server, sizeof(server));
+}
+
+
 #define INFO_STREAM( stream ) \
 std::cout << stream << std::endl
 
@@ -141,7 +177,10 @@ void visualise_tracking(cv::Mat& captured_image, cv::Mat_<float>& depth_image, c
 		// Draw it in reddish if uncertain, blueish if certain
 		LandmarkDetector::DrawBox(captured_image, pose_estimate_to_draw, cv::Scalar((1 - vis_certainty)*255.0, 0, vis_certainty * 255), thickness, fx, fy, cx, cy);
 
-		INFO_STREAM(pose_estimate_to_draw);
+		// INFO_STREAM(std::to_string(pose_estimate_to_draw[0]));
+		// MessageSend(std::to_string(pose_estimate_to_draw[0]));
+	    send(sd, (char *)std::to_string(pose_estimate_to_draw[0]).c_str(), strlen((char *)std::to_string(pose_estimate_to_draw[0]).c_str()), 0);
+
 		// INFO_STREAM( cx );
 		// INFO_STREAM( cy );
 		
@@ -182,6 +221,8 @@ void visualise_tracking(cv::Mat& captured_image, cv::Mat_<float>& depth_image, c
 
 int main (int argc, char **argv)
 {
+
+	DoConnect();
 
 	vector<string> arguments = get_arguments(argc, argv);
 
