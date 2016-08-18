@@ -140,6 +140,10 @@ void visualise_tracking(cv::Mat& captured_image, cv::Mat_<float>& depth_image, c
 
 		// Draw it in reddish if uncertain, blueish if certain
 		LandmarkDetector::DrawBox(captured_image, pose_estimate_to_draw, cv::Scalar((1 - vis_certainty)*255.0, 0, vis_certainty * 255), thickness, fx, fy, cx, cy);
+
+		INFO_STREAM(pose_estimate_to_draw);
+		// INFO_STREAM( cx );
+		// INFO_STREAM( cy );
 		
 		if (det_parameters.track_gaze && detection_success && face_model.eye_model)
 		{
