@@ -56,6 +56,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/CCNF_patch_expert
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
  /usr/local/include/boost/assert.hpp
  /usr/local/include/boost/cerrno.hpp
  /usr/local/include/boost/checked_delete.hpp
@@ -1298,6 +1300,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetection
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
  /usr/local/include/boost/assert.hpp
  /usr/local/include/boost/cerrno.hpp
  /usr/local/include/boost/checked_delete.hpp
@@ -2540,6 +2544,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorF
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
  /usr/local/include/boost/assert.hpp
  /usr/local/include/boost/cerrno.hpp
  /usr/local/include/boost/checked_delete.hpp
@@ -3783,6 +3789,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorM
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
  /usr/local/include/boost/assert.hpp
  /usr/local/include/boost/cerrno.hpp
  /usr/local/include/boost/checked_delete.hpp
@@ -5025,6 +5033,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorP
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
  /usr/local/include/boost/assert.hpp
  /usr/local/include/boost/cerrno.hpp
  /usr/local/include/boost/checked_delete.hpp
@@ -5610,6 +5620,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorU
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
  /usr/local/include/boost/assert.hpp
  /usr/local/include/boost/cerrno.hpp
  /usr/local/include/boost/checked_delete.hpp
@@ -6852,6 +6864,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PAW.cpp.o
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
  /usr/local/include/boost/assert.hpp
  /usr/local/include/boost/cerrno.hpp
  /usr/local/include/boost/checked_delete.hpp
@@ -8094,6 +8108,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PDM.cpp.o
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
  /usr/local/include/boost/assert.hpp
  /usr/local/include/boost/cerrno.hpp
  /usr/local/include/boost/checked_delete.hpp
@@ -9336,6 +9352,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/Patch_experts.cpp
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
  /usr/local/include/boost/assert.hpp
  /usr/local/include/boost/cerrno.hpp
  /usr/local/include/boost/checked_delete.hpp
@@ -10578,6 +10596,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/SVR_patch_expert.
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
  /usr/local/include/boost/assert.hpp
  /usr/local/include/boost/cerrno.hpp
  /usr/local/include/boost/checked_delete.hpp
@@ -11820,6 +11840,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/stdafx.cpp.o
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
  /usr/local/include/boost/assert.hpp
  /usr/local/include/boost/cerrno.hpp
  /usr/local/include/boost/checked_delete.hpp

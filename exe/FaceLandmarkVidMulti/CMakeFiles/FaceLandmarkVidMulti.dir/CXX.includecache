@@ -21,6 +21,18 @@ opencv2/imgproc.hpp
 -
 opencv2/highgui/highgui.hpp
 -
+iostream
+-
+stdio.h
+-
+string
+-
+sys/socket.h
+-
+netdb.h
+-
+arpa/inet.h
+-
 
 /usr/local/Cellar/opencv3/3.1.0_3/include/opencv/cxcore.h
 opencv2/core/core_c.h
@@ -477,6 +489,16 @@ opencv2/videoio.hpp
 /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
 opencv2/core/core_c.h
 /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/opencv2/core/core_c.h
+
+/usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+opencv2/features2d.hpp
+/usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/opencv2/features2d.hpp
+opencv2/xfeatures2d/nonfree.hpp
+/usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/opencv2/xfeatures2d/nonfree.hpp
+
+/usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
+opencv2/features2d.hpp
+/usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/opencv2/features2d.hpp
 
 /usr/local/include/tbb/aggregator.h
 atomic.h

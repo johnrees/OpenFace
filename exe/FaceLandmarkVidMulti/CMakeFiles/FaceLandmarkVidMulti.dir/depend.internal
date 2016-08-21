@@ -56,6 +56,8 @@ exe/FaceLandmarkVidMulti/CMakeFiles/FaceLandmarkVidMulti.dir/FaceLandmarkVidMult
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio.hpp
  /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+ /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
  /usr/local/include/tbb/aggregator.h
  /usr/local/include/tbb/aligned_space.h
  /usr/local/include/tbb/atomic.h

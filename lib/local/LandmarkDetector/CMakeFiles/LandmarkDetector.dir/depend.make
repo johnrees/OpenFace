@@ -55,6 +55,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/CCNF_patch_expert
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/CCNF_patch_expert.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/CCNF_patch_expert.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/CCNF_patch_expert.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/CCNF_patch_expert.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/CCNF_patch_expert.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/CCNF_patch_expert.cpp.o: /usr/local/include/boost/assert.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/CCNF_patch_expert.cpp.o: /usr/local/include/boost/cerrno.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/CCNF_patch_expert.cpp.o: /usr/local/include/boost/checked_delete.hpp
@@ -1297,6 +1299,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetection
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectionValidator.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectionValidator.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectionValidator.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectionValidator.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectionValidator.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectionValidator.cpp.o: /usr/local/include/boost/assert.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectionValidator.cpp.o: /usr/local/include/boost/cerrno.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectionValidator.cpp.o: /usr/local/include/boost/checked_delete.hpp
@@ -2539,6 +2543,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorF
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorFunc.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorFunc.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorFunc.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorFunc.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorFunc.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorFunc.cpp.o: /usr/local/include/boost/assert.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorFunc.cpp.o: /usr/local/include/boost/cerrno.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorFunc.cpp.o: /usr/local/include/boost/checked_delete.hpp
@@ -3782,6 +3788,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorM
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorModel.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorModel.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorModel.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorModel.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorModel.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorModel.cpp.o: /usr/local/include/boost/assert.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorModel.cpp.o: /usr/local/include/boost/cerrno.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorModel.cpp.o: /usr/local/include/boost/checked_delete.hpp
@@ -5024,6 +5032,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorP
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorParameters.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorParameters.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorParameters.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorParameters.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorParameters.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorParameters.cpp.o: /usr/local/include/boost/assert.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorParameters.cpp.o: /usr/local/include/boost/cerrno.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorParameters.cpp.o: /usr/local/include/boost/checked_delete.hpp
@@ -5609,6 +5619,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorU
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorUtils.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorUtils.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorUtils.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorUtils.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorUtils.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorUtils.cpp.o: /usr/local/include/boost/assert.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorUtils.cpp.o: /usr/local/include/boost/cerrno.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/LandmarkDetectorUtils.cpp.o: /usr/local/include/boost/checked_delete.hpp
@@ -6851,6 +6863,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PAW.cpp.o: /usr/l
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PAW.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PAW.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PAW.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PAW.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PAW.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PAW.cpp.o: /usr/local/include/boost/assert.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PAW.cpp.o: /usr/local/include/boost/cerrno.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PAW.cpp.o: /usr/local/include/boost/checked_delete.hpp
@@ -8093,6 +8107,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PDM.cpp.o: /usr/l
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PDM.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PDM.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PDM.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PDM.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PDM.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PDM.cpp.o: /usr/local/include/boost/assert.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PDM.cpp.o: /usr/local/include/boost/cerrno.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/PDM.cpp.o: /usr/local/include/boost/checked_delete.hpp
@@ -9335,6 +9351,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/Patch_experts.cpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/Patch_experts.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/Patch_experts.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/Patch_experts.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/Patch_experts.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/Patch_experts.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/Patch_experts.cpp.o: /usr/local/include/boost/assert.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/Patch_experts.cpp.o: /usr/local/include/boost/cerrno.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/Patch_experts.cpp.o: /usr/local/include/boost/checked_delete.hpp
@@ -10577,6 +10595,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/SVR_patch_expert.
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/SVR_patch_expert.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/SVR_patch_expert.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/SVR_patch_expert.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/SVR_patch_expert.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/SVR_patch_expert.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/SVR_patch_expert.cpp.o: /usr/local/include/boost/assert.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/SVR_patch_expert.cpp.o: /usr/local/include/boost/cerrno.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/SVR_patch_expert.cpp.o: /usr/local/include/boost/checked_delete.hpp
@@ -11819,6 +11839,8 @@ lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/stdafx.cpp.o: /us
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/stdafx.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/video/tracking_c.h
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/stdafx.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/stdafx.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/videoio/videoio_c.h
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/stdafx.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d.hpp
+lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/stdafx.cpp.o: /usr/local/Cellar/opencv3/3.1.0_3/include/opencv2/xfeatures2d/nonfree.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/stdafx.cpp.o: /usr/local/include/boost/assert.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/stdafx.cpp.o: /usr/local/include/boost/cerrno.hpp
 lib/local/LandmarkDetector/CMakeFiles/LandmarkDetector.dir/src/stdafx.cpp.o: /usr/local/include/boost/checked_delete.hpp

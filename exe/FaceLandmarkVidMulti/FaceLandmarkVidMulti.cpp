@@ -39,20 +39,20 @@
 //
 //       OpenFace: an open source facial behavior analysis toolkit
 //       Tadas Baltrušaitis, Peter Robinson, and Louis-Philippe Morency
-//       in IEEE Winter Conference on Applications of Computer Vision, 2016  
+//       in IEEE Winter Conference on Applications of Computer Vision, 2016
 //
 //       Rendering of Eyes for Eye-Shape Registration and Gaze Estimation
-//       Erroll Wood, Tadas Baltrušaitis, Xucong Zhang, Yusuke Sugano, Peter Robinson, and Andreas Bulling 
-//       in IEEE International. Conference on Computer Vision (ICCV),  2015 
+//       Erroll Wood, Tadas Baltrušaitis, Xucong Zhang, Yusuke Sugano, Peter Robinson, and Andreas Bulling
+//       in IEEE International. Conference on Computer Vision (ICCV),  2015
 //
 //       Cross-dataset learning and person-speci?c normalisation for automatic Action Unit detection
-//       Tadas Baltrušaitis, Marwa Mahmoud, and Peter Robinson 
-//       in Facial Expression Recognition and Analysis Challenge, 
-//       IEEE International Conference on Automatic Face and Gesture Recognition, 2015 
+//       Tadas Baltrušaitis, Marwa Mahmoud, and Peter Robinson
+//       in Facial Expression Recognition and Analysis Challenge,
+//       IEEE International Conference on Automatic Face and Gesture Recognition, 2015
 //
 //       Constrained Local Neural Fields for robust facial landmark detection in the wild.
-//       Tadas Baltrušaitis, Peter Robinson, and Louis-Philippe Morency. 
-//       in IEEE Int. Conference on Computer Vision Workshops, 300 Faces in-the-Wild Challenge, 2013.    
+//       Tadas Baltrušaitis, Peter Robinson, and Louis-Philippe Morency.
+//       in IEEE Int. Conference on Computer Vision Workshops, 300 Faces in-the-Wild Challenge, 2013.
 //
 ///////////////////////////////////////////////////////////////////////////////
 
@@ -68,6 +68,41 @@
 #include <opencv2/videoio/videoio_c.h>  // Video write
 #include <opencv2/imgproc.hpp>
 #include <opencv2/highgui/highgui.hpp>
+
+
+//General includes:
+#include <iostream>
+#include <stdio.h>
+#include <string>
+
+//Network related includes:
+#include <sys/socket.h>
+#include <netdb.h>
+#include <arpa/inet.h>
+
+//Target host details:
+#define PORT 8888
+#define HOST "127.0.0.1"
+
+int sd, ret;
+struct sockaddr_in server;
+struct in_addr ipv4addr;
+struct hostent *hp;
+
+void DoConnect()
+{
+    sd = socket(AF_INET,SOCK_STREAM,0);
+    server.sin_family = AF_INET;
+
+    inet_pton(AF_INET, HOST, &ipv4addr);
+    hp = gethostbyaddr(&ipv4addr, sizeof ipv4addr, AF_INET);
+    //hp = gethostbyname(HOST);
+
+    bcopy(hp->h_addr, &(server.sin_addr.s_addr), hp->h_length);
+    server.sin_port = htons(PORT);
+
+    connect(sd, (const sockaddr *)&server, sizeof(server));
+}
 
 #define INFO_STREAM( stream ) \
 std::cout << stream << std::endl
@@ -110,7 +145,7 @@ void NonOverlapingDetections(const vector<LandmarkDetector::CLNF>& clnf_models, 
 
 		// See if the detections intersect
 		cv::Rect_<double> model_rect = clnf_models[model].GetBoundingBox();
-		
+
 		for(int detection = face_detections.size()-1; detection >=0; --detection)
 		{
 			double intersection_area = (model_rect & face_detections[detection]).area();
@@ -128,17 +163,19 @@ void NonOverlapingDetections(const vector<LandmarkDetector::CLNF>& clnf_models, 
 int main (int argc, char **argv)
 {
 
+	DoConnect();
+
 	vector<string> arguments = get_arguments(argc, argv);
 
-	// Some initial parameters that can be overriden from command line	
+	// Some initial parameters that can be overriden from command line
 	vector<string> files, depth_directories, tracked_videos_output, dummy_out;
-	
+
 	// By default try webcam 0
 	int device = 0;
 
 	// cx and cy aren't necessarilly in the image center, so need to be able to override it (start with unit vals and init them if none specified)
     float fx = 600, fy = 600, cx = 0, cy = 0;
-			
+
 	LandmarkDetector::FaceModelParameters det_params(arguments);
 	det_params.use_face_template = true;
 	// This is so that the model would not try re-initialising itself
@@ -154,17 +191,17 @@ int main (int argc, char **argv)
 	LandmarkDetector::get_video_input_output_params(files, depth_directories, dummy_out, tracked_videos_output, u, arguments);
 	// Get camera parameters
 	LandmarkDetector::get_camera_params(device, fx, fy, cx, cy, arguments);
-	
+
 	// The modules that are being used for tracking
 	vector<LandmarkDetector::CLNF> clnf_models;
 	vector<bool> active_models;
 
-	int num_faces_max = 4;
+	int num_faces_max = 2;
 
 	LandmarkDetector::CLNF clnf_model(det_parameters[0].model_location);
 	clnf_model.face_detector_HAAR.load(det_parameters[0].face_detector_location);
 	clnf_model.face_detector_location = det_parameters[0].face_detector_location;
-	
+
 	clnf_models.reserve(num_faces_max);
 
 	clnf_models.push_back(clnf_model);
@@ -176,9 +213,9 @@ int main (int argc, char **argv)
 		active_models.push_back(false);
 		det_parameters.push_back(det_params);
 	}
-	
+
 	// If multiple video files are tracked, use this to indicate if we are done
-	bool done = false;	
+	bool done = false;
 	int f_n = -1;
 
 	// If cx (optical axis centre) is undefined will use the image size/2 as an estimate
@@ -186,21 +223,21 @@ int main (int argc, char **argv)
 	if(cx == 0 || cy == 0)
 	{
 		cx_undefined = true;
-	}		
-	
+	}
+
 	while(!done) // this is not a for loop as we might also be reading from a webcam
 	{
-		
+
 		string current_file;
 
 		// We might specify multiple video files as arguments
 		if(files.size() > 0)
 		{
-			f_n++;			
+			f_n++;
 		    current_file = files[f_n];
 		}
 
-		bool use_depth = !depth_directories.empty();	
+		bool use_depth = !depth_directories.empty();
 
 		// Do some grabbing
 		cv::VideoCapture video_capture;
@@ -227,8 +264,8 @@ int main (int argc, char **argv)
 		else INFO_STREAM( "Device or file opened");
 
 		cv::Mat captured_image;
-		video_capture >> captured_image;		
-		
+		video_capture >> captured_image;
+
 
 		// If optical centers are not defined just use center of image
 		if(cx_undefined)
@@ -236,16 +273,16 @@ int main (int argc, char **argv)
 			cx = captured_image.cols / 2.0f;
 			cy = captured_image.rows / 2.0f;
 		}
-		
+
 		int frame_count = 0;
-		
+
 		// saving the videos
 		cv::VideoWriter writerFace;
 		if(!tracked_videos_output.empty())
 		{
 			writerFace = cv::VideoWriter(tracked_videos_output[f_n], CV_FOURCC('D','I','V','X'), 30, captured_image.size(), true);
 		}
-		
+
 		// For measuring the timings
 		int64 t1,t0 = cv::getTickCount();
 		double fps = 10;
@@ -253,7 +290,7 @@ int main (int argc, char **argv)
 
 		INFO_STREAM( "Starting tracking");
 		while(!captured_image.empty())
-		{		
+		{
 
 			// Reading the images
 			cv::Mat_<float> depth_image;
@@ -263,13 +300,13 @@ int main (int argc, char **argv)
 
 			if(captured_image.channels() == 3)
 			{
-				cv::cvtColor(captured_image, grayscale_image, CV_BGR2GRAY);				
+				cv::cvtColor(captured_image, grayscale_image, CV_BGR2GRAY);
 			}
 			else
 			{
-				grayscale_image = captured_image.clone();				
+				grayscale_image = captured_image.clone();
 			}
-		
+
 			// Get depth image
 			if(use_depth)
 			{
@@ -302,10 +339,10 @@ int main (int argc, char **argv)
 					all_models_active = false;
 				}
 			}
-						
+
 			// Get the detections (every 8th frame and when there are free models available for tracking)
 			if(frame_count % 8 == 0 && !all_models_active)
-			{				
+			{
 				if(det_parameters[0].curr_face_detector == LandmarkDetector::FaceModelParameters::HOG_SVM_DETECTOR)
 				{
 					vector<double> confidences;
@@ -332,7 +369,7 @@ int main (int argc, char **argv)
 
 				// If the current model has failed more than 4 times in a row, remove it
 				if(clnf_models[model].failures_in_a_row > 4)
-				{				
+				{
 					active_models[model] = false;
 					clnf_models[model].Reset();
 
@@ -341,20 +378,20 @@ int main (int argc, char **argv)
 				// If the model is inactive reactivate it with new detections
 				if(!active_models[model])
 				{
-					
+
 					for(size_t detection_ind = 0; detection_ind < face_detections.size(); ++detection_ind)
 					{
 						// if it was not taken by another tracker take it (if it is false swap it to true and enter detection, this makes it parallel safe)
 						if(face_detections_used[detection_ind].compare_and_swap(true, false) == false)
 						{
-					
+
 							// Reinitialise the model
 							clnf_models[model].Reset();
 
 							// This ensures that a wider window is used for the initial landmark localisation
 							clnf_models[model].detection_success = false;
 							detection_success = LandmarkDetector::DetectLandmarksInVideo(grayscale_image, depth_image, face_detections[detection_ind], clnf_models[model], det_parameters[model]);
-													
+
 							// This activates the model
 							active_models[model] = true;
 
@@ -370,7 +407,11 @@ int main (int argc, char **argv)
 					detection_success = LandmarkDetector::DetectLandmarksInVideo(grayscale_image, depth_image, clnf_models[model], det_parameters[model]);
 				}
 			});
-								
+
+			INFO_STREAM("------");
+
+			std::string s = "";
+
 			// Go through every model and visualise the results
 			for(size_t model = 0; model < clnf_models.size(); ++model)
 			{
@@ -379,7 +420,7 @@ int main (int argc, char **argv)
 				double detection_certainty = clnf_models[model].detection_certainty;
 
 				double visualisation_boundary = -0.1;
-			
+
 				// Only draw if the reliability is reasonable, the value is slightly ad-hoc
 				if(detection_certainty < visualisation_boundary)
 				{
@@ -394,30 +435,44 @@ int main (int argc, char **argv)
 
 					// A rough heuristic for box around the face width
 					int thickness = (int)std::ceil(2.0* ((double)captured_image.cols) / 640.0);
-					
+
 					// Work out the pose of the head from the tracked model
 					cv::Vec6d pose_estimate = LandmarkDetector::GetCorrectedPoseWorld(clnf_models[model], fx, fy, cx, cy);
-					
+
+					// cv::Vec6d pose_estimate2 = LandmarkDetector::GetPoseCamera(clnf_models[model], fx, fy, cx, cy);
+
+					INFO_STREAM(pose_estimate);
+					// extract X,Y,directionalX,directionalY features of detected face
+					int x = (int)pose_estimate[0];
+					int y = (int)pose_estimate[1];
+					double rx = pose_estimate[3];
+					double ry = pose_estimate[4];
+					// s = s + std::to_string(model) + ":" + std::to_string(x) + "," + std::to_string(y) + "|";
+					//  concatenate features into a string
+					s = s + std::to_string(x) + "," + std::to_string(y) + "," + std::to_string(rx) + "," + std::to_string(ry) + "|";
+
 					// Draw it in reddish if uncertain, blueish if certain
 					LandmarkDetector::DrawBox(disp_image, pose_estimate, cv::Scalar((1-detection_certainty)*255.0,0, detection_certainty*255), thickness, fx, fy, cx, cy);
 				}
 			}
+			// send concatenated feature string over tcp socket
+			send(sd, (char *)s.c_str(), strlen((char *)s.c_str()), 0);
 
 			// Work out the framerate
 			if(frame_count % 10 == 0)
-			{      
+			{
 				t1 = cv::getTickCount();
-				fps = 10.0 / (double(t1-t0)/cv::getTickFrequency()); 
+				fps = 10.0 / (double(t1-t0)/cv::getTickFrequency());
 				t0 = t1;
 			}
-			
+
 			// Write out the framerate on the image before displaying it
 			char fpsC[255];
 			sprintf(fpsC, "%d", (int)fps);
 			string fpsSt("FPS:");
 			fpsSt += fpsC;
 			cv::putText(disp_image, fpsSt, cv::Point(10,20), CV_FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255,0,0), 1, CV_AA);
-			
+
 			int num_active_models = 0;
 
 			for( size_t active_model = 0; active_model < active_models.size(); active_model++)
@@ -433,7 +488,7 @@ int main (int argc, char **argv)
 			string active_models_st("Active models:");
 			active_models_st += active_m_C;
 			cv::putText(disp_image, active_models_st, cv::Point(10,60), CV_FONT_HERSHEY_SIMPLEX, 0.5, CV_RGB(255,0,0), 1, CV_AA);
-			
+
 			if(!det_parameters[0].quiet_mode)
 			{
 				cv::namedWindow("tracking_result",1);
@@ -448,15 +503,15 @@ int main (int argc, char **argv)
 
 			// output the tracked video
 			if(!tracked_videos_output.empty())
-			{		
+			{
 				writerFace << disp_image;
 			}
 
 			video_capture >> captured_image;
-		
+
 			// detect key presses
 			char character_press = cv::waitKey(1);
-			
+
 			// restart the trackers
 			if(character_press == 'r')
 			{
@@ -475,7 +530,7 @@ int main (int argc, char **argv)
 			// Update the frame count
 			frame_count++;
 		}
-		
+
 		frame_count = 0;
 
 		// Reset the model, for the next video

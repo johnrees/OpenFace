@@ -94,22 +94,6 @@ struct sockaddr_in server;
 struct in_addr ipv4addr;
 struct hostent *hp;
 
-void DoConnect()
-{
-    sd = socket(AF_INET,SOCK_STREAM,0);
-    server.sin_family = AF_INET;
-
-    inet_pton(AF_INET, HOST, &ipv4addr);
-    hp = gethostbyaddr(&ipv4addr, sizeof ipv4addr, AF_INET);
-    //hp = gethostbyname(HOST);
-
-    bcopy(hp->h_addr, &(server.sin_addr.s_addr), hp->h_length);
-    server.sin_port = htons(PORT);
-
-    connect(sd, (const sockaddr *)&server, sizeof(server));
-}
-
-
 #define INFO_STREAM( stream ) \
 std::cout << stream << std::endl
 
@@ -129,6 +113,24 @@ static void printErrorAndAbort( const std::string & error )
 printErrorAndAbort( std::string( "Fatal error: " ) + stream )
 
 using namespace std;
+
+
+void DoConnect()
+{
+	INFO_STREAM("CONNECTING");
+    sd = socket(AF_INET,SOCK_STREAM,0);
+    server.sin_family = AF_INET;
+
+    inet_pton(AF_INET, HOST, &ipv4addr);
+    hp = gethostbyaddr(&ipv4addr, sizeof ipv4addr, AF_INET);
+    //hp = gethostbyname(HOST);
+
+    bcopy(hp->h_addr, &(server.sin_addr.s_addr), hp->h_length);
+    server.sin_port = htons(PORT);
+
+    connect(sd, (const sockaddr *)&server, sizeof(server));
+}
+
 
 vector<string> get_arguments(int argc, char **argv)
 {
@@ -179,7 +181,14 @@ void visualise_tracking(cv::Mat& captured_image, cv::Mat_<float>& depth_image, c
 
 		// INFO_STREAM(std::to_string(pose_estimate_to_draw[0]));
 		// MessageSend(std::to_string(pose_estimate_to_draw[0]));
-	    send(sd, (char *)std::to_string(pose_estimate_to_draw[0]).c_str(), strlen((char *)std::to_string(pose_estimate_to_draw[0]).c_str()), 0);
+
+		INFO_STREAM( pose_estimate_to_draw );
+
+		int x = (int)pose_estimate_to_draw[0];
+		int y = (int)pose_estimate_to_draw[1];
+		std::string s = std::to_string(x) + "," + std::to_string(y);
+
+	    send(sd, (char *)s.c_str(), strlen((char *)s.c_str()), 0);
 
 		// INFO_STREAM( cx );
 		// INFO_STREAM( cy );
